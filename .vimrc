@@ -284,11 +284,11 @@
     " Vimrc {
           " Let's make it easy to edit this file (mnemonic for the key sequence is
           " 'e'dit 'v'imrc)
-          nmap <silent> ,ev :e $MYVIMRC<cr>
+          nmap <silent> <leader>ev :split $MYVIMRC<cr>
 
           " And to source this file as well (mnemonic for the key sequence is
           " 's'ource 'v'imrc)
-          nmap <silent> ,sv :so $MYVIMRC<cr>
+          nmap <silent> <leader>sv :so $MYVIMRC<cr>
     " }
     " Window navigation {
           nmap <silent> ,h :wincmd h<CR>
@@ -297,6 +297,20 @@
           nmap <silent> ,l :wincmd l<CR>
     " }
 
+    " Mappings inspired from http://learnvimscriptthehardway.stevelosh.com {
+        " Move line up/down
+        nnoremap - ddp
+        nnoremap _ ddkP
+
+        " Delete current line
+        inoremap <c-d> <esc>ddi
+
+        " Caplitalise current word
+        inoremap <c-u> <esc>viwUea
+        nnoremap <c-u> viw
+
+
+    " }
 " }
 
 " Plugin-specific settings {
@@ -393,6 +407,11 @@
         endif
     endfunction
 
+" }
+
+" Abbreviations {
+    iabbrev ot to
+    iabbrev teh the
 " }
 
 " vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell sts=4 ts=4 sw=4:
