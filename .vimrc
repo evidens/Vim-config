@@ -52,6 +52,7 @@
                                            \ 'twig',
                                            \ 'Align294',
                                            \ 'Javascript_Indentation',
+                                           \ 'Headlights',
                                            \ 'Markdown'])
                                            "\ 'pyflakes2441',
                 catch /.*/
