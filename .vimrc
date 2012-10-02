@@ -366,7 +366,7 @@
 
     " Close all open buffers on entering a window if the only
     " buffer that's left is the NERDTree buffer
-    function s:CloseIfOnlyNerdTreeLeft()
+    function! s:CloseIfOnlyNerdTreeLeft()
         if exists("t:NERDTreeBufName")
           if bufwinnr(t:NERDTreeBufName) != -1
             if winnr("$") == 1
@@ -377,7 +377,7 @@
     endfunction
 
     " If the parameter is a directory, cd into it
-    function s:CdIfDirectory(directory)
+    function! s:CdIfDirectory(directory)
         let explicitDirectory = isdirectory(a:directory)
         let directory = explicitDirectory || empty(a:directory)
 
@@ -403,7 +403,7 @@
     endfunction
 
     " NERDTree utility function
-    function s:UpdateNERDTree(...)
+    function! s:UpdateNERDTree(...)
         let stay = 0
 
         if(exists("a:1"))
