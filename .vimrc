@@ -252,6 +252,8 @@
 " }
 
 " Mappings {
+    " Easy escape
+    imap <silent> jk <esc>
 
     " Toggle paste mode
     nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
