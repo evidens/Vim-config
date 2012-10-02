@@ -334,6 +334,7 @@
     " NERDTree {
           let NERDTreeIgnore=['\.pyc$', '\~$']
           nmap ,n :NERDTreeToggle<CR>
+          nmap ,b :NERDTreeFromBookmark
     " }
     " NERDCommenter {
           " Command-/ to toggle comments
