@@ -40,21 +40,23 @@
           fu! ConfigAddonManager()
                 set runtimepath+=~/vim-addons/vim-addon-manager
                 try
-                    call vam#ActivateAddons(['snipMate', 'snipmate-snippets',
-                                           \ 'The_NERD_tree', 'The_NERD_Commenter',
-                                           \ 'Solarized',
-                                           \ 'IndentAnything',
-                                           \ 'project.tar.gz',
-                                           \ 'FuzzyFinder', 'ack',
-                                           \ 'matchit.zip', 'AutoClose',
-                                           \ 'repeat', 'surround', 'taglist',
-                                           \ 'html5',
-                                           \ 'twig',
-                                           \ 'Align294',
-                                           \ 'Javascript_Indentation',
-                                           \ 'Headlights',
-                                           \ 'Markdown'])
-                                           "\ 'pyflakes2441',
+                    call vam#ActivateAddons([
+                           \'snipMate', 'snipmate-snippets',
+                           \ 'The_NERD_tree', 'The_NERD_Commenter',
+                           \ 'PowerLine',
+                           \ 'Solarized',
+                           \ 'IndentAnything',
+                           \ 'project.tar.gz',
+                           \ 'FuzzyFinder', 'ack',
+                           \ 'matchit.zip', 'AutoClose',
+                           \ 'repeat', 'surround', 'taglist',
+                           \ 'html5', 'vim-coffee-script',
+                           \ 'twig',
+                           \ 'ack',
+                           \ 'Align294',
+                           \ 'Javascript_Indentation',
+                           \ 'Headlights',
+                           \ 'Markdown'])
                 catch /.*/
                     echoe v:exception
                 endtry
@@ -161,7 +163,7 @@
     set spell
 
     " Set default font
-    set gfn=Monaco:h14
+    set gfn=Monaco\ for\ Powerline:h14
 
     " Set consistent tab stops
     set shiftwidth=4
@@ -341,6 +343,9 @@
     " TagList support {
           let Tlist_Use_Right_Window = 1
           nnoremap <F4> :TListToggle<CR>
+    " }
+
+    let g:Powerline_symbols = 'fancy'
     " }
 " }
 
