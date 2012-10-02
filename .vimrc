@@ -347,6 +347,13 @@
 
     let g:Powerline_symbols = 'fancy'
     " }
+
+" Language-specific settings {
+    " Coffee Script {
+        au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+        au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+    " }
+
 " }
 
 " Useful Janus functions {
