@@ -282,6 +282,9 @@
     " Clean trailing spaces in a file
     nmap <Leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+    " Toggle mac meta (allow special character typing OR meta binding)
+    nmap <Leader>M :set macmeta!
+
     " Shortcut to set filetype to Django template (for new files)
     nmap <silent> ,dj :set filetype=htmldjango.html<CR>
     " Vimrc {
