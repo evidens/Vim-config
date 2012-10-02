@@ -316,9 +316,15 @@
 
 " Plugin-specific settings {
     " FuzzyFinder {
-          nmap ,fb :FufBuffer<CR>
-          nmap ,ff :FufFile<CR>
-          nmap ,ft :FufTag<CR>
+        function! NERDSafe(cmdname)
+            if stridx(bufname("%"),"NERD_tree") >= 0
+                :wincmd w
+            endif
+            exec a:cmdname
+        endfunction
+        noremap <leader>ff :call NERDSafe("FufFile")<CR>
+        noremap <leader>fb :call NERDSafe("FufBuffer")<CR>
+        nmap ,ft :FufTag<CR>
     " }
     " Project {
           let g:proj_window_width=40
